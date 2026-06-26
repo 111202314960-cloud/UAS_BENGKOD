@@ -17,33 +17,33 @@ gender = st.selectbox('Jenis Kelamin', ['Male', 'Female'])
 if st.button("Prediksi"):
     # Menyusun dataframe dengan SEMUA 26 kolom yang digunakan saat training
     # Fitur dari form dimasukkan, sisanya diisi dengan nilai default/dummy
-    input_data = pd.DataFrame([{
+   input_data = pd.DataFrame([{
         'gender': gender,
         'age': age,
-        'country': 'UK',
-        'city': 'London',
-        'acquisition_channel': 'Email',
-        'device_type': 'Desktop',
-        'subscription_type': 'Monthly',
-        'is_premium_user': 0,          # Ubah jadi 0 (Bukan premium)
-        'total_visits': 2,             # Jarang berkunjung
-        'avg_session_time': 1.0,       # Waktu kunjung sangat sebentar
-        'pages_per_session': 1.0,
-        'email_open_rate': 0.0,        # Tidak pernah buka email promo
-        'email_click_rate': 0.0,
         'total_spent': total_spent,
-        'avg_order_value': 10.0,
+        'support_tickets': support_tickets,
+        'country': 'USA',
+        'city': 'New York',
+        'acquisition_channel': 'Google Ads',
+        'device_type': 'Tablet',
+        'subscription_type': 'Monthly',
+        'is_premium_user': 0,
+        'total_visits': 8,
+        'avg_session_time': 9.99585673373457,
+        'pages_per_session': 2.2909877458028,
+        'email_open_rate': 0.99,
+        'email_click_rate': 0.42,
+        'avg_order_value': 78.2129256719875,
         'discount_used': 0,
-        'coupon_code': 'NONE',
-        'support_tickets': support_tickets, 
-        'refund_requested': 1,         # Pernah minta refund (1 = Ya)
-        'delivery_delay_days': 5,      # Sering telat pengiriman 5 hari
-        'payment_method': 'Card',
-        'satisfaction_score': 1,       # Bintang 1 (Sangat Kecewa)
-        'nps_score': 1,                # Skor NPS hancur
-        'marketing_spend_per_user': 5.0,
-        'lifetime_value': 50.0,
-        'last_3_month_purchase_freq': 0 # 0 transaksi di 3 bulan terakhir
+        'coupon_code': nan,
+        'refund_requested': 0,
+        'delivery_delay_days': 2,
+        'payment_method': 'PayPal',
+        'satisfaction_score': 1.0,
+        'nps_score': 4,
+        'marketing_spend_per_user': 19.26,
+        'lifetime_value': 1340.17184911385,
+        'last_3_month_purchase_freq': 14,
     }])
     
     try:
