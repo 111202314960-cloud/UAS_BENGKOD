@@ -16,8 +16,7 @@ gender = st.selectbox('Jenis Kelamin', ['Male', 'Female'])
 
 if st.button("Prediksi"):
     # Menyusun dataframe dengan SEMUA 26 kolom yang digunakan saat training
-    # Fitur dari form dimasukkan, sisanya diisi dengan nilai default/dummy
-   input_data = pd.DataFrame([{
+    input_data = pd.DataFrame([{
         'gender': gender,
         'age': age,
         'total_spent': total_spent,
@@ -35,7 +34,7 @@ if st.button("Prediksi"):
         'email_click_rate': 0.42,
         'avg_order_value': 78.2129256719875,
         'discount_used': 0,
-        'coupon_code': NONE,
+        'coupon_code': 'NONE',
         'refund_requested': 0,
         'delivery_delay_days': 2,
         'payment_method': 'PayPal',
@@ -43,7 +42,7 @@ if st.button("Prediksi"):
         'nps_score': 4,
         'marketing_spend_per_user': 19.26,
         'lifetime_value': 1340.17184911385,
-        'last_3_month_purchase_freq': 14,
+        'last_3_month_purchase_freq': 14
     }])
     
     try:
