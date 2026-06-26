@@ -35,7 +35,7 @@ if st.button("Prediksi"):
         'email_click_rate': 0.42,
         'avg_order_value': 78.2129256719875,
         'discount_used': 0,
-        'coupon_code': nan,
+        'coupon_code': NONE,
         'refund_requested': 0,
         'delivery_delay_days': 2,
         'payment_method': 'PayPal',
