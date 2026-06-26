@@ -25,25 +25,25 @@ if st.button("Prediksi"):
         'acquisition_channel': 'Email',
         'device_type': 'Desktop',
         'subscription_type': 'Monthly',
-        'is_premium_user': 1,
-        'total_visits': 10,
-        'avg_session_time': 5.0,
-        'pages_per_session': 3.0,
-        'email_open_rate': 0.5,
-        'email_click_rate': 0.2,
+        'is_premium_user': 0,          # Ubah jadi 0 (Bukan premium)
+        'total_visits': 2,             # Jarang berkunjung
+        'avg_session_time': 1.0,       # Waktu kunjung sangat sebentar
+        'pages_per_session': 1.0,
+        'email_open_rate': 0.0,        # Tidak pernah buka email promo
+        'email_click_rate': 0.0,
         'total_spent': total_spent,
-        'avg_order_value': 50.0,
+        'avg_order_value': 10.0,
         'discount_used': 0,
         'coupon_code': 'NONE',
-        'support_tickets': support_tickets,
-        'refund_requested': 0,
-        'delivery_delay_days': 0,
+        'support_tickets': support_tickets, 
+        'refund_requested': 1,         # Pernah minta refund (1 = Ya)
+        'delivery_delay_days': 5,      # Sering telat pengiriman 5 hari
         'payment_method': 'Card',
-        'satisfaction_score': 4,
-        'nps_score': 8,
-        'marketing_spend_per_user': 15.0,
-        'lifetime_value': 1000.0,
-        'last_3_month_purchase_freq': 3
+        'satisfaction_score': 1,       # Bintang 1 (Sangat Kecewa)
+        'nps_score': 1,                # Skor NPS hancur
+        'marketing_spend_per_user': 5.0,
+        'lifetime_value': 50.0,
+        'last_3_month_purchase_freq': 0 # 0 transaksi di 3 bulan terakhir
     }])
     
     try:
